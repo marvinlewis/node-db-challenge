@@ -40,11 +40,19 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] Explain the difference between `Relational Databases` and `SQL`.
 
+- A Relational Database is a way to store data on a table or set of tables that are connected or have relation to eachother. A table has columns and rows that hold values sent from the client through an api. SQL on the other hand is a tool to add, organize, and retrieve data from a database. 
+
 - [ ] Why do tables need a `primary key`?
+
+- Tables need a primary key to keep organization of the data in relation to the database itself. Also, the table needs a way to connect to other tables and that is done through a primary key connecting to a foreign key. 
 
 - [ ] What is the name given to a table column that references the primary key on another table.
 
+A foreign key.
+
 - [ ] What do we need in order to have a _many to many_ relationship between two tables.
+
+A conjunction table. A conjuntion table takes two tables and connects them via foreign keys on the conjunction. 
 
 ## Minimum Viable Product
 
