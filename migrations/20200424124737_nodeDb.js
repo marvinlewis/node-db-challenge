@@ -5,14 +5,14 @@ exports.up = function(knex) {
       tbl.increments('id').primary();
       tbl.string('name', 255).notNullable();
       tbl.string('description', 255);
-      tbl.boolean('completed');
+      tbl.boolean('completed').defaultTo(0).notNullable();
   })
 
   .createTable('task', tbl => {
       tbl.increments('id').primary();
       tbl.string('description', 255).notNullable();
       tbl.string('notes', 255);
-      tbl.boolean('completed');
+      tbl.boolean('completed').defaultTo(0).notNullable();
       tbl.integer('projectId').notNullable()
       .references('id')
       .inTable('project')
@@ -21,7 +21,7 @@ exports.up = function(knex) {
 
   .createTable('resource', tbl => {
       tbl.increments('id').primary();
-      tbl.string('name', 255).notNullable();
+      tbl.string('name', 255).unique().notNullable();
       tbl.string('description', 255);
   })
 
