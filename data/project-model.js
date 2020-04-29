@@ -32,6 +32,6 @@ function addTask(item) {
 function getTask() {
     return db('task')
     .join('project', 'project.id', 'task.projectId')
-    .select('project.name', 'project.description')
+    .select('project.name', 'project.description', 'task.description', 'task.notes', 'task.completed', 'task.projectId')
     
 };
